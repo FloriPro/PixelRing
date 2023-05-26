@@ -40,6 +40,14 @@ public class HitboxStore {
     }
 
     /**
+     * Returns the hitbox list
+     * @return The hitbox list
+     */
+    public List<Hitbox> getAllHitboxes() {
+        return hitboxes;
+    }
+
+    /**
      * Removes all hitboxes from the store
      */
     public void clear() {

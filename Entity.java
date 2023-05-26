@@ -69,7 +69,8 @@ public class Entity {
      */
     public void setSprite(ImageView javafxNode) {
         this.javafxNode = javafxNode;
-        // TODO add to view
+        // TODO add to view:
+        // View.getInstance().add(this.javafxNode);
     }
 
     /**
@@ -87,7 +88,9 @@ public class Entity {
      * Removes the entity from the screen
      */
     public void remove() {
-        // TODO remove from view and remove node remove from hitboxstore
+        HitboxStore.getInstance().removeHitbox(this.hitbox);
+        // TODO remove the image from view:
+        // View.getInstance().remove(this.javafxNode);
     }
 
     /**
@@ -95,6 +98,7 @@ public class Entity {
      */
     public void updatePos() {
         // TODO Set postion relative to camera, thats why we use the view for that
+        // View.getInstance().setPos(this.javafxNode, this.posX, this.posY);
     }
 
     /**
