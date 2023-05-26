@@ -1,0 +1,5 @@
+// PLACEHOLDER!
+
+public class Hitbox {
+    
+}

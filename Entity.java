@@ -1,5 +1,3 @@
-import javafx.scene.Node;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class Entity {
@@ -62,5 +60,17 @@ public class Entity {
 
     public void updatePos() {
         // TODO Set postion
+    }
+
+    public void move(double x, double y) {
+        // TODO check collision with walls
+
+        posX += x;
+        posY += y;
+
+        // set Rotation
+        rot = (int) Math.toDegrees(Math.atan2(y, x));
+
+        this.updatePos();
     }
 }
